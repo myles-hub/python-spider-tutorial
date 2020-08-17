@@ -33,7 +33,7 @@
 
 > 一句话总结：JSON 数据转换为 python 数据，其实质就是 “将`字符串`转换为python可以方便调用的`某种数据类型`的操作” ，具体来说就是上面的2中转换实操，详细图解如下。
 
-![image-20200817194834046](.\images\image-20200817194834046.png)
+<img src=".\images\image-20200817194834046.png" alt="image-20200817194834046" style="zoom:80%;" />
 
 #### 实例演示
 
@@ -101,11 +101,11 @@ Process finished with exit code 0
 
 - （1）python 类型数据转换为 **<u>json 字符串</u>**
 
-![image-20200817212114051](.\images\image-20200817212114051.png)
+<img src=".\images\image-20200817212114051.png" alt="image-20200817212114051" style="zoom:80%;" />
 
 - （2）python 数据类型以**<u>json格式写入文件</u>**
 
-![image-20200817212152977](.\images\image-20200817212152977.png)
+<img src=".\images\image-20200817212152977.png" alt="image-20200817212152977" style="zoom:80%;" />
 
 #### 实例演示
 
