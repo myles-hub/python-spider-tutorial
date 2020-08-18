@@ -91,10 +91,6 @@ Process finished with exit code 0
 
 
 
-
-
-
-
 ### 3. python 转换为 json
 
 #### 概念介绍
@@ -116,22 +112,14 @@ Process finished with exit code 0
 
 ```
 
-
-
-
-
-
-
 ### 4. 案例：解析疫情首页 json字符串数据
 
-
-
-## 5. 命令总结
+### 5. 命令总结
 
 - json.loads(strings)
 
 - json.load(fp)
 
-- json.dumps()
+- json.dumps(obj)
 
-- json.dump()
+- json.dump(obj, fp)
