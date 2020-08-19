@@ -10,8 +10,8 @@
 ## 学习目录
 
 - json 模块介绍
-- json 转换为 python
-- python 转换为 json
+- 解码：json 转换为 python
+- 解码：python 转换为 json
 - 案例：解析疫情首页 json字符串数据
 
 
@@ -153,11 +153,11 @@ print(last_day_cornna_virus)
 
 ### 5. 命令总结
 
-- **json -> python**
+- **解码：json -> python**
   - json.loads(strings)
 
   - json.load(fp)
-- **python -> json**
+- **编码：python -> json**
   - json.dumps(obj)
   - json.dump(obj, fp)
 
@@ -167,5 +167,6 @@ print(last_day_cornna_virus)
 
 json 是一种轻量级的数据存储格式，我们python想要去使用它，就存在一下2中场景：
 
-	- 解码过程：python想要调用json数据时，就必须对其进行解码后才能调用；
-	- 编码过程：同样我们python中调的数据如果需要以json格式进行存储，则就需要遵循json的编码要求进行编码存储后，其才能被正常调用；
+> 解码过程：python想要调用json数据时，就必须对其进行解码后才能调用；
+> 编码过程：同样我们python中调的数据如果需要以json格式进行存储，则就需要遵循json的编码要求进行编码存储后，其才能被正常调用；
+
