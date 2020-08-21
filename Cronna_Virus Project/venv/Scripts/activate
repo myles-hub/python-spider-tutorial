@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\admin\Desktop\Python 学习\python-spider-tutorial\学习笔记\Cronna_Virus Project\venv"
+VIRTUAL_ENV="C:\Users\admin\Desktop\Python 学习\python-spider-tutorial\Cronna_Virus Project\venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
