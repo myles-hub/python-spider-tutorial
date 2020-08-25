@@ -9,13 +9,13 @@ class CoronaVirusSpider:
     def __init__(self):
         self.url = "https://ncov.dxy.cn/ncovh5/view/pneumonia"
 
-    def get_content_from_url(self):
+    def get_content_from_url(self,url):
         """
         获取指定标签中的指定内容字符串
         :param: 请求的url
         :return: 响应内容字符串
         """
-        response = requests.get(self.url)
+        response = requests.get(url)
         home_page = response.content.decode("utf-8")
         return home_page
 

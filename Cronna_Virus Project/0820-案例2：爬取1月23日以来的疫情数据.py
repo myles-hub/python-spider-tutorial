@@ -88,7 +88,7 @@ class CoronaVirusSpider:
             # print(country_day_data_statistics)
             corona_virus.extend(country_day_data_statistics)
 
-        # 5. 最后将python数据存储为json文档(调用self.save())；
+        # 6. 最后将python数据存储为json文档(调用self.save())；
         self.save_to_json(corona_virus, r'data/corona_virus.json')
 
     def run(self):
