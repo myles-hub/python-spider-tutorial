@@ -11,7 +11,7 @@
 
 - json 模块介绍
 - 解码：json 转换为 **python对象**
-- 解码：**python对象** 转换为 json
+- 编码：**python对象** 转换为 json
 - 案例：解析疫情首页 json字符串数据
 
 
@@ -176,3 +176,10 @@ json 是一种轻量级的数据存储格式，我们python想要去使用它，
   - （1）json.load() /json.loads()  解码：其加载的目标只有一个，就是为获取一个可操作`python数据对象（obj)`；
   - （2）json.dump()/json.dumps()编码：其载入的对象只能是`python数据对象`，然后分别获取到一个`json file对象`和`json string对象`；
   - 总结：json模块的这4个关键函数方法，都是围绕着 **”python对象“** 来进行操作的，一个为了获取 **”python对象“** ,一个是为了将  **”python对象“**  转换为`文件对象`或`字符串对象`。
+- 记忆辅助2
+  - 解码：解码是为了获取一个可操作的**“python对象”**；
+    - json.load(fp)  --->  obj
+    - json.loads(str) ---> obj
+  - 编码：编码是为了将**“python对象“**转换为可存储的**“json文件”**或者**“json字符串”**
+    - json.dump(obj, fp)  ---> json_file
+    - json.dumps(obj) ---> json_str

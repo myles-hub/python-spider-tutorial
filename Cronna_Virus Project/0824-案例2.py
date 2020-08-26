@@ -39,7 +39,7 @@ class CoronaVirusSpider:
         data = json.loads(json_str)
         return data
 
-    def save_to_json(self, file_path, data):
+    def save_to_json(self, data, file_path):
         """
         将疫情python数据保存为json文件
         :param file_path: data/corona_virus.json
@@ -54,13 +54,15 @@ class CoronaVirusSpider:
         # 2. 提取引起字符串数据，并转为python对象
         data = self.parse_home_page(home_page, "getListByCountryTypeService2true")
         # 3. 保证python数据为json文件
-        self.save_to_json(r"data/last_day_corona_virus.json", data)
+        self.save_to_json(data, r"data/last_day_corona_virus.json")
 
     def crawl_corona_virus(self):
         # （1）加载json文件为python可操控对象；
         with open(r'data/last_day_corona_virus.json', 'r', encoding='utf-8') as fp:
             last_day_corona_virus = json.load(fp)
 
+        # 添加一个空列表，用来收集后续所有国家/省的数据收集
+        corona_virus = []
         # （2）通过关键字提取url链接；
         for country in tqdm(last_day_corona_virus, "采集1月23日后的每日疫情数据"):
             country_url = country["statisticsData"]
@@ -79,12 +81,15 @@ class CoronaVirusSpider:
                 everyday["provinceName"] = country["provinceName"]
                 everyday["countryShortCode"] = country["countryShortCode"]
 
+            corona_virus.extend(data_of_country_dict)
+
         # （6）最后，在将python数据保证为json文件存储起来；
-        self.save_to_json('data/corona_virus.json')
+        print(corona_virus)
+        self.save_to_json(corona_virus, r'data/corona_virus.json')
 
     def run(self):
         # self.crawl_last_day_corona_virus()
-        # self.crawl_corona_virus()
+        self.crawl_corona_virus()
 
 if __name__ == "__main__":
     spider = CoronaVirusSpider()
